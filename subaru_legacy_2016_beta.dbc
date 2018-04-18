@@ -44,10 +44,10 @@ BO_ 884 DoorStatus: 8 XXX
  SG_ DoorOpenHatch : 28|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 324 CruiseControl: 7 XXX
- SG_ BrakeApplied : 8|1@0+ (1,0) [0|0] "" XXX
- SG_ CruiseEnabled : 48|1@0+ (1,0) [0|0] "" XXX
  SG_ BrakeStatus : 51|1@0+ (1,0) [0|0] "" XXX
  SG_ CruiseButtons : 4|2@0+ (1,0) [0|3] "" XXX
+ SG_ BrakeApplied : 8|1@0+ (1,0) [0|0] "" XXX
+ SG_ CruiseEnabled : 48|1@0+ (1,0) [0|0] "" XXX
 
 BO_ 320 Throttle: 8 XXX
  SG_ ThrottlePosition : 7|8@0+ (1,0) [0|255] "" XXX
@@ -61,13 +61,19 @@ BO_ 2 Steering: 8 XXX
 BO_ 642 TurnSignal: 8 XXX
  SG_ TurnSignal : 45|2@0+ (1,0) [0|3] "" XXX
 
+BO_ 212 FWD-REV-Motion: 8 XXX
+ SG_ NEW_SIGNAL_2 : 23|8@0+ (1,0) [0|255] "" XXX
+ SG_ Wheel Speed 1 : 0|8@1- (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_1 : 8|3@1+ (1,0) [0|7] "" XXX
+ SG_ NEW_SIGNAL_3 : 24|3@1+ (1,0) [0|7] "" XXX
 
 
 
 
-VAL_ 324 BrakeApplied 1 "On" 0 "Off" ;
-VAL_ 324 CruiseEnabled 1 "On" 0 "Off" ;
+
 VAL_ 324 BrakeStatus 1 "On" 0 "Off" ;
 VAL_ 324 CruiseButtons 2 "Set" 1 "Resume" ;
+VAL_ 324 BrakeApplied 1 "On" 0 "Off" ;
+VAL_ 324 CruiseEnabled 1 "On" 0 "Off" ;
 VAL_ 642 TurnSignal 2 "Left" 1 "Right" ;
 CM_ "CHFFR_METRIC 2 STEER_ANGLE STEER_ANGLE 0.36 180";
